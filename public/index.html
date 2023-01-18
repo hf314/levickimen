@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Levicki Men</title>
+  <link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/ionicons@6.0.4/dist/ionicons.js"></script>
+
+</head>
+<body>
+
+<div class="home-background">
+<!--  <nav class="bg-gray-800 fixed top-0 z-40 w-screen">-->
+<!--    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">-->
+<!--      <div class="relative flex h-16 items-center justify-between">-->
+<!--        <div class="flex mx-auto items-center">-->
+<!--          <div class="hidden sm:ml-6 sm:block">-->
+<!--            <div class="flex space-x-4">-->
+<!--              <a href="#uslugi" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Usługi</a>-->
+<!--              <a href="#o-mnie" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">O Mnie</a>-->
+<!--              <a href="#szkolenie" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Szkolenie</a>-->
+<!--              <a href="#audyt" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Audyt</a>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </nav>-->
+
+
+
+  <div class="container mx-auto max-w-full px-2 sm:px-6 lg:px-8 bg-gray-800 items-center">
+    <nav class="flex justify-between items-center w-[92%] mx-auto py-5 z-50">
+      <div></div>
+      <div class="z-40 text-gray-100 nav-links duration-500 md:static absolute bg-gray-800 md:min-h-fit min-h-[270px] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
+        <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+          <li>
+            <a class="hover:text-gray-50 hover:bg-gray-500 py-2 px-3 rounded-md transition-all transition:300" href="#uslugi" onclick="closeMenu()">Uslugi</a>
+          </li>
+          <li>
+            <a class="hover:text-gray-50 hover:bg-gray-500 py-2 px-3 rounded-md transition-all transition:300" href="#o-mnie" onclick="closeMenu()">O Mnie</a>
+          </li>
+          <li>
+            <a class="hover:text-gray-50 hover:bg-gray-500 py-2 px-3 rounded-md transition-all transition:300" href="#szkolenie" onclick="closeMenu()">Szkolenie</a>
+          </li>
+          <li>
+            <a class="hover:text-gray-50 hover:bg-gray-500 py-2 px-3 rounded-md transition-all transition:300" href="#audyt" onclick="closeMenu()">Audyt</a>
+          </li>
+        </ul>
+      </div>
+      <div class="flex items-center gap-6">
+        <ion-icon onclick="onToggleMenu(this)" name="menu" class="z-50 text-3xl cursor-pointer md:hidden"></ion-icon>
+      </div>
+    </nav>
+  </div>
+  <script>
+      const navLinks = document.querySelector('.nav-links')
+      function onToggleMenu(e){
+          e.name = e.name === 'menu' ? 'close' : 'menu'
+          navLinks.classList.toggle('top-[55px]')
+      }
+      function closeMenu(){
+          document.querySelector("ion-icon[name='close']").click();
+      }
+      document.addEventListener('click', function(event) {
+          if (!event.target.closest('nav')) {
+              closeMenu();
+          }
+      });
+  </script>
+
+
+
+
+
+
+
+  <!--  -->
+
+  <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+    <div class="flex-grow flex flex-col items-center justify-center">
+      <img id="logo" class="z-0 mx-auto my-auto xl:w-96 lg:w-96 md:w-80 sm:w-64 w-64 h-auto" src="images/logo-white.png" alt="LOGO">
+      <a class="z-0" href="https://wa.me/message/RSWP7VG4ZGC5D1" target="_blank"><button type="button" class="mt-10 inline-flex items-center rounded-md border border-gray-300 bg-gray-100 px-6 py-4 text-md font-medium leading-5 text-gray-600 shadow-sm hover:border-gray-400 hover:bg-gray-200 hover:text-gray-800">
+        <!-- Heroicon name: mini/plus -->
+        <span>Umówić się</span>
+      </button></a>
+    </div>
+  </div>
+  <a href="#uslugi"><h1 class="text-center text-lg text-white absolute bottom-8 mx-auto w-full">SCROLL</h1></a>
+</div>
+
+<!---->
+
+<div id="uslugi" class="bg-gray-100">
+  <div class="container mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 bg-gray-100">
+    <h1 class="text-center pt-28 font-medium text-4xl text-gray-800">LEVICKIMEN WARSZAWA</h1>
+
+
+    <div class="flex flex-col">
+
+      <div class="mt-20 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+        <div class="flex items-start rounded-md bg-white p-4 shadow-md">
+          <div class="ml-4">
+            <h2 class="font-semibold text-lg text-gray-800">Mobilny barber</h2>
+            <p class="mt-2 text-md text-gray-600">Teraz już nie musisz tracić czasu w korkach oraz na szukanie parkingu, można po prostu zamówić mobilnego barbera do domu</p>
+          </div>
+        </div>
+
+        <div class="flex items-start rounded-md bg-white p-4 shadow-md">
+          <div class="ml-4">
+            <h2 class="font-semibold text-lg text-gray-800">Audyt</h2>
+            <p class="mt-2 text-md text-gray-600">Zamów kompleksowy audyt salonu który pozwoli zwiększyć zysk biznesu nawet do 7-10%</p>
+          </div>
+        </div>
+
+        <div class="flex items-start rounded-md bg-white p-4 shadow-md">
+          <div class="ml-4">
+            <h2 class="font-semibold text-lg text-gray-800">Szkolenie</h2>
+            <p class="mt-2 text-md text-gray-600">Zapisz się na indywidualne szkolenie ze mną po którym będziesz mógł zdobyć o wiele więcej klientów</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+<!---->
+
+<div class="bg-gray-100 py-20">
+  <div class="container mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 bg-gray-100">
+    <div class="divide-y divide-gray-200 overflow-hidden rounded-md bg-gray-100 shadow sm:grid sm:grid-cols-2 sm:gap-px sm:divide-y-0">
+      <div class="rounded-tl-md rounded-tr-md sm:rounded-tr-none relative group bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+        <div>
+          <span class="rounded-md inline-flex p-3 bg-gray-100 text-gray-800 ring-4 ring-white">
+            <!-- Heroicon name: outline/academic-cap -->
+            <h1>100 zł</h1>
+          </span>
+        </div>
+        <div class="mt-8">
+          <h3 class="text-lg font-medium">
+            <!-- Extend touch target to entire panel -->
+            <span class="absolute inset-0 text-gray-800" aria-hidden="true"></span>
+            Strzyżenie włosów
+          </h3>
+          <p class="mt-2 text-md text-gray-600 italic">Hair cut</p>
+          <p class="mt-2 text-md text-gray-600 italic">Стрижка волос</p>
+        </div>
+      </div>
+
+      <div class="sm:rounded-tr-md relative group bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+        <div>
+          <span class="rounded-md inline-flex p-3 bg-gray-100 text-gray-800 ring-4 ring-white">
+            <!-- Heroicon name: outline/academic-cap -->
+            <h1>150 zł</h1>
+          </span>
+        </div>
+        <div class="mt-8">
+            <h3 class="text-lg font-medium">
+              <!-- Extend touch target to entire panel -->
+              <span class="absolute inset-0 text-gray-800" aria-hidden="true"></span>
+              Combo (włosy + broda)
+            </h3>
+          <p class="mt-2 text-md text-gray-600 italic">Combo (hair + beard)</p>
+          <p class="mt-2 text-md text-gray-600 italic">Комбо (волосы + борода)</p>
+        </div>
+      </div>
+
+      <div class="sm:rounded-bl-md relative group bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+        <div>
+          <span class="rounded-md inline-flex p-3 bg-gray-100 text-gray-800 ring-4 ring-white">
+            <!-- Heroicon name: outline/academic-cap -->
+            <h1>140 zł</h1>
+          </span>
+        </div>
+        <div class="mt-8">
+          <h3 class="text-lg font-medium">
+              <!-- Extend touch target to entire panel -->
+              <span class="absolute inset-0 text-gray-800" aria-hidden="true"></span>
+            Strzyżenie włosów z dojazdem
+          </h3>
+          <p class="mt-2 text-md text-gray-600 italic">Hair cut wit delivery to the client</p>
+          <p class="mt-2 text-md text-gray-600 italic">Стрижка волос с доездом до клиента</p>
+        </div>
+      </div>
+
+      <div class="rounded-br-md sm:rounded-md-none relative group bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+        <div>
+          <span class="rounded-md inline-flex p-3 bg-gray-100 text-gray-800 ring-4 ring-white">
+            <!-- Heroicon name: outline/academic-cap -->
+            <h1>180 zł</h1>
+          </span>
+        </div>
+        <div class="mt-8">
+          <h3 class="text-lg font-medium">
+            <!-- Extend touch target to entire panel -->
+            <span class="absolute inset-0 text-gray-800" aria-hidden="true"></span>
+            Combo z dojazdem
+          </h3>
+          <p class="mt-2 text-md text-gray-600 italic">Combo wit delivery to the client</p>
+          <p class="mt-2 text-md text-gray-600 italic">Комбо с доездом до клиента</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!---->
+
+<div id="o-mnie" class="relative">
+  <div class="absolute inset-0 flex items-center bg-gray-100" aria-hidden="true">
+    <div class="w-full border-t border-gray-300"></div>
+  </div>
+  <div class="relative flex justify-center">
+    <a href="https://wa.me/message/RSWP7VG4ZGC5D1" target="_blank"><button type="button" class="inline-flex items-center rounded-md border border-gray-300 bg-gray-100 px-6 py-4 text-md font-medium leading-5 text-gray-600 shadow-sm hover:border-gray-400 hover:bg-gray-200 hover:text-gray-800">
+      <!-- Heroicon name: mini/plus -->
+      <span>Umówić się</span>
+    </button></a>
+  </div>
+</div>
+
+<!---->
+
+<div class="bg-gray-100 py-20">
+  <div class="container mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 bg-gray-100">
+    <h1 class="text-center font-medium text-4xl text-gray-800">Barber z dojazdem</h1>
+    <p class="my-10 text-md text-center mx-auto w-6/6 text-gray-600">Dla tego aby umówić się do barbera z dojazdem wystarczy mieć w domu ulubione krzesełko a reszta przyjedzie ze mną. Obszar w którym działam to teren Warszawy oraz okolicy.</p>
+    <div class="aspect-w-16 aspect-h-9 relative" style="padding-top: 30%">
+      <iframe
+              class="embed-responsive-item absolute top-0 right-0 bottom-0 left-0 w-full h-full rounded-md"
+              src="https://www.youtube-nocookie.com/embed/-Tq0QeHQ3Dg"
+              allowfullscreen=""
+              data-gtm-yt-inspected-2340190_699="true"
+              id="240632615"
+      ></iframe>
+    </div>
+  </div>
+</div>
+
+<!---->
+
+<div id="szkolenie" class="relative">
+  <div class="absolute inset-0 flex items-center bg-gray-100" aria-hidden="true">
+    <div class="w-full border-t border-gray-300"></div>
+  </div>
+  <div class="relative flex justify-center">
+    <a href="https://wa.me/message/RSWP7VG4ZGC5D1" target="_blank"><button type="button" class="inline-flex items-center rounded-md border border-gray-300 bg-gray-100 px-6 py-4 text-md font-medium leading-5 text-gray-600 shadow-sm hover:border-gray-400 hover:bg-gray-200 hover:text-gray-800">
+      <!-- Heroicon name: mini/plus -->
+      <span>Umówić się</span>
+    </button></a>
+  </div>
+</div>
+
+<!---->
+
+<div class="bg-gray-100 py-20">
+  <div class="container mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 bg-gray-100">
+    <h1 class="text-center font-medium text-4xl text-gray-800">Indywidualne szkolenie</h1>
+    <p class="mt-10 text-md text-center mx-auto w-5/6 text-gray-600">Pod czas szkolenia można uaktualnić swoje umiejętności, zapoznać się ze światem fryzjerskim lub poznać nowe techniki. <br><br>Godzina szkolenia kosztuje <span class="font-medium text-gray-700">249 zł</span>. Do mnie można umówić się o dowolnej porze na dowolną ilość godzin.</p>
+    <ul role="list" class="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8 pt-10">
+      <li class="relative">
+        <div class="shadow-md group aspect-w-10 aspect-h-7 block w-full overflow-hidden rounded-md bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
+          <img src="images/dfghvstv.jpg" alt="" class="h-auto pointer-events-none object-cover">
+        </div>
+      </li>
+      <li class="relative">
+        <div class="shadow-md group aspect-w-10 aspect-h-7 block w-full overflow-hidden rounded-md bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
+          <img src="images/dghjhggvbxcv.jpg" alt="" class="h-auto pointer-events-none object-cover">
+        </div>
+      </li>
+      <li class="relative">
+        <div class="shadow-md group aspect-w-10 aspect-h-7 block w-full overflow-hidden rounded-md bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
+          <img src="images/sdfgsdfg.jpg" alt="" class="h-auto pointer-events-none object-cover">
+        </div>
+      </li>
+      <li class="relative">
+        <div class="shadow-md group aspect-w-10 aspect-h-7 block w-full overflow-hidden rounded-md bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
+          <img src="images/IMG_0126.JPG" alt="" class="h-auto pointer-events-none object-cover">
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!---->
+
+<div id="audyt" class="relative">
+  <div class="absolute inset-0 flex items-center bg-gray-100" aria-hidden="true">
+    <div class="w-full border-t border-gray-300"></div>
+  </div>
+  <div class="relative flex justify-center">
+    <a href="https://wa.me/message/RSWP7VG4ZGC5D1" target="_blank"><button type="button" class="inline-flex items-center rounded-md border border-gray-300 bg-gray-100 px-6 py-4 text-md font-medium leading-5 text-gray-600 shadow-sm hover:border-gray-400 hover:bg-gray-200 hover:text-gray-800">
+      <!-- Heroicon name: mini/plus -->
+      <span>Umówić się</span>
+    </button></a>
+  </div>
+</div>
+
+<!---->
+
+<section class="bg-gray-100">
+  <div class="container px-6 py-10 mx-auto max-w-7xl">
+
+    <div class="mt-8 lg:-mx-6 lg:flex lg:items-center">
+      <img class="shadow-md object-cover w-full lg:mx-6 lg:w-1/2 rounded-md h-72 lg:h-96" src="https://images.unsplash.com/photo-1596362601603-b74f6ef166e4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1026&q=80"alt="">
+
+      <div class="mt-6 lg:w-1/2 lg:mt-0 lg:mx-6 ">
+
+        <h1 class="font-medium text-4xl text-gray-800">Audyt</h1>
+
+        <p class="mt-3 text-lg font-medium text-gray-700 md:text-base">
+          Audyt salonu/barbershopu
+        </p>
+        <p class="mt-3 text-md text-gray-600 md:text-base">
+          Kompleksowy audyt salonu polega na sprawdzaniu działania każdego etapu biznesu bądź to łatwość wyszukiwanie salonu w internecie lub jakość wykonywanie usługi. Po czym przeze mnie jest robiony raport po którym można zobaczyć słabe strony swego biznesu po usunięciu których zysk może wzrosnąć nawet do <span class="font-medium text-gray-700">7-10%</span>.
+        </p>
+        <p class="mt-3 text-lg font-medium text-gray-700 md:text-base">
+          Ceny audytu:
+        </p>
+        <p class="mt-3 text-md text-gray-600 md:text-base">
+          team <span class="font-medium text-gray-700">249 zł/pracownik</span>
+          <br>wizerunek salonu na zewnątrz <span class="font-medium text-gray-700">99 zł</span>
+          <br>wizerunek salonu wewnątrz <span class="font-medium text-gray-700">899 zł</span>
+          <br>wizerunek salonu w internecie <span class="font-medium text-gray-700">599 zł</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="bg-gray-100 py-20">
+  <div class="container mx-auto max-w-8/12 px-2 sm:px-6 lg:px-8 bg-gray-100">
+    <img id="logo" class="my-12 mx-auto my-aut0 xl:w-48 lg:w-48 md:w-40 sm:w-40 w-40 h-auto" src="images/logo-black.png" alt="LOGO">
+    <p class="text-sm text-center text-gray-500">+48 575 314 605</p>
+    <p class="text-sm text-center text-gray-500">© Copyright 2023 LEVICKIMEN. Wszystkie prawa zastrzeżone. </p>
+  </div>
+</div>
+
+
+
+<style>
+    .home-background {
+        padding: 0;
+        margin: 0;
+        background-image: url("https://images.unsplash.com/photo-1622737133809-d95047b9e673?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+        background-position: center;
+    }
+    ion-icon {
+        color: #f3f4f6;
+    }
+</style>
+
+</body>
+</html>
